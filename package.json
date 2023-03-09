@@ -1,0 +1,11 @@
+{
+  "name": "login-signup-system",
+  "version": "1.0.0",
+  "description": "A login/Signup System",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "author": "A. S. M. Sohag Abdullah",
+  "license": "ISC"
+}
