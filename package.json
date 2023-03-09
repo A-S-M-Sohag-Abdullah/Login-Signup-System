@@ -4,8 +4,11 @@
   "description": "A login/Signup System",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "start": "node index.js"
   },
   "author": "A. S. M. Sohag Abdullah",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mime": "^3.0.0"
+  }
 }
