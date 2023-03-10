@@ -9,6 +9,7 @@
   "author": "A. S. M. Sohag Abdullah",
   "license": "ISC",
   "dependencies": {
-    "mime": "^3.0.0"
+    "mime": "^3.0.0",
+    "mongodb": "^5.1.0"
   }
 }

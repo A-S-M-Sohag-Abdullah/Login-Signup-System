@@ -11,6 +11,7 @@ const url = require("url");
 const fs = require("fs");
 const qs = require("querystring");
 const mime = require("mime");
+const { handleFormData } = require("./formhandler");
 
 const server = http.createServer((req, res) => {
   let parsedURL = url.parse(req.url, true);
@@ -23,15 +24,14 @@ const server = http.createServer((req, res) => {
 
     // Read request body
     req.on("data", (data) => {
-      body += data;
+      body += data.toString();
     });
 
     // Parse form data and handle it
     req.on("end", () => {
       const formData = qs.parse(body);
-      console.log(formData);
-      res.writeHead(200, { "Content-Type": 'application/json'});
-      res.end(JSON.stringify(formData));
+      const myForm = formData.myForm;
+      handleFormData(formData);
     });
     res.writeHead(200);
   }
